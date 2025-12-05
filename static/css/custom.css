@@ -131,6 +131,29 @@ header a.text-primary-text:not([href="#about"]):not([href*="#about"]):hover {
   color: #4870ac !important;
 }
 
+/* About page (mobile only) override: prevent clipping without touching other pages */
+@media (max-width: 767px) {
+  div#about .about-cv-container {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  div#about .about-cv-content {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    overflow: visible !important;
+  }
+  div#about .about-cv-content .prose,
+  div#about .about-cv-content .prose h1,
+  div#about .about-cv-content .prose h2,
+  div#about .about-cv-content .prose h3,
+  div#about .about-cv-content .prose h4,
+  div#about .about-cv-content .prose p,
+  div#about .about-cv-content .prose ul,
+  div#about .about-cv-content .prose ol {
+    text-align: center;
+  }
+}
+
 /* General prose links (fallback for other pages) */
 .prose a:not(header a):not(nav a) {
   color: #4870ac !important;
@@ -166,11 +189,10 @@ header a.text-primary-text:not([href="#about"]):not([href*="#about"]):hover {
   }
 }
 
-/* Left sidebar positioning */
-/* Mobile: keep margins neutral to avoid negative offset/cropping */
+/* Left sidebar positioning - original offsets (desktop) */
 .about-cv-container {
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: -12.5%; /* Move left by approximately half of lg:w-1/4 (25%) = 12.5% */
+  margin-right: 0; /* Reset right margin */
 }
 
 @media (min-width: 768px) {
