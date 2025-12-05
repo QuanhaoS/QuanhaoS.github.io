@@ -166,10 +166,11 @@ header a.text-primary-text:not([href="#about"]):not([href*="#about"]):hover {
   }
 }
 
-/* Left sidebar positioning - move right to align with increased header padding */
+/* Left sidebar positioning */
+/* Mobile: keep margins neutral to avoid negative offset/cropping */
 .about-cv-container {
-  margin-left: -12.5%; /* Move left by approximately half of lg:w-1/4 (25%) = 12.5% */
-  margin-right: 0; /* Reset right margin */
+  margin-left: 0;
+  margin-right: 0;
 }
 
 @media (min-width: 768px) {
