@@ -142,15 +142,20 @@ header a.text-primary-text:not([href="#about"]):not([href*="#about"]):hover {
     padding-right: 1rem !important;
     overflow: visible !important;
   }
-  div#about .about-cv-content .prose,
+  /* Mobile: headings centered; body text/ lists left aligned */
+  div#about .about-cv-content .prose {
+    text-align: left;
+  }
   div#about .about-cv-content .prose h1,
   div#about .about-cv-content .prose h2,
   div#about .about-cv-content .prose h3,
-  div#about .about-cv-content .prose h4,
+  div#about .about-cv-content .prose h4 {
+    text-align: center;
+  }
   div#about .about-cv-content .prose p,
   div#about .about-cv-content .prose ul,
   div#about .about-cv-content .prose ol {
-    text-align: center;
+    text-align: left;
   }
 }
 
