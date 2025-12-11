@@ -4,12 +4,12 @@ draft: false
 role: "PhD Student"
 avatar: img/quanhao-sun.jpg
 organization:
-  name: "Your University"
+  name: "University of Southern California"
 social:
   - icon: envelope
     iconPack: fas
     name: Email
-    url: mailto:quanhao.sun@example.com
+    url: mailto:quanhaos@usc.edu
   - icon: linkedin-in
     iconPack: fab
     name: LinkedIn
@@ -34,7 +34,7 @@ widget:
 
 ## About Me
 
-I am Quanhao Sun, a PhD student in Computer Science.
+I am a PhD student in Biomedical Engineering at the University of Southern California. My research focuses on generative AI for brain MRI, especially generative models and diffusion-based methods for reconstruction, motion correction, and cross-modality synthesis.
 
 * Research Interest 1
 * Research Interest 2
@@ -59,8 +59,8 @@ I am Quanhao Sun, a PhD student in Computer Science.
 
 ## Education
 
-* **PhD in Computer Science, Expected Year**  
-  Your University  
+* **PhD in Biomedical Engineering, 2027**  
+  University of Southern California  
   Research focus: Machine Learning, Computer Vision
 
 * **Bachelor's Degree, Year**  
