@@ -1,0 +1,26 @@
+# Each entry below becomes one row in the Publications section.
+#
+# Field reference (only `title` and `authors` are really required):
+#   title            - paper title. Wrap in "quotes" if it contains a colon.
+#   authors          - full author list. Wrap Quanhao's name in <strong></strong>.
+#   conference_short - short badge shown on the thumbnail, e.g. MICCAI, ISMRM.
+#   conference       - full venue string, shown in italics under the authors.
+#   pdf              - link to the PDF or arXiv page. Also makes the title clickable.
+#   code             - link to the code repository.               (optional)
+#   page             - link to a project page.                    (optional)
+#   bibtex           - link to a .txt file containing the BibTeX. (optional)
+#   image            - teaser thumbnail, ~600px wide.             (optional)
+#   notes            - red highlight text, e.g. "Oral Presentation". (optional)
+
+main:
+
+  # TODO: replace this example with Quanhao's real publications, newest first.
+  # Delete this entry entirely if there is nothing to list yet — an empty
+  # `main:` renders as an empty Publications section, which is fine.
+  - title: "Example Paper Title: Replace Me"
+    authors: First Author, <strong>Quanhao Sun</strong>, Senior Author
+    conference_short: MICCAI
+    conference: International Conference on Medical Image Computing and Computer-Assisted Intervention <strong>(MICCAI)</strong>, 2025.
+    pdf: https://arxiv.org/abs/0000.00000
+    image: ./assets/img/teaser_example.png
+    notes: Early Accept
