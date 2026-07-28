@@ -12,9 +12,11 @@ canonical: https://quanhaos.github.io/
 
 # Links
 # If you don't need one of them, you may delete the corresponding line.
-# TODO: add the Google Scholar profile URL, or delete the line if there isn't one yet.
-google_scholar:
-cv_link: assets/files/curriculum_vitae.pdf
+# TODO: add the Google Scholar profile URL, then uncomment.
+# google_scholar:
+# TODO: drop the real CV PDF into assets/files/ and uncomment. Left out for now
+# so the site doesn't link the theme author's placeholder CV as Quanhao's.
+# cv_link: assets/files/curriculum_vitae.pdf
 github_link: https://github.com/QuanhaoS
 linkedin: https://www.linkedin.com/in/quanhao-sun/
 
