@@ -22,16 +22,15 @@ synthesis.
 - **Ph.D. in Biomedical Engineering**, University of Southern California, expected 2027
 
 <!--
-Sections below are ready but not shown yet, because publishing placeholder papers
-or an empty Services list is worse than omitting the section. Uncomment each line
-once the real content is in place:
+Publications and Services are not shown yet — publishing placeholder papers or an
+empty Services list is worse than omitting the section.
 
-  - Publications -> fill in _data/publications.yml
-  - Services     -> fill in _includes/services.md
+To turn Publications on: fill in _data/publications.yml, then add an
+include_relative tag for _includes/publications.md at the bottom of this file.
+Same for Services with _includes/services.md.
 
 A News section can go above Publications once there are real items to list.
 
-{% include_relative _includes/publications.md %}
-
-{% include_relative _includes/services.md %}
+The include tags are described in words rather than written out because Liquid
+tags execute even inside HTML comments.
 -->
