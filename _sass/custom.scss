@@ -1,0 +1,353 @@
+// Customizations layered on top of the stock Minimal Light theme.
+//
+// This file is imported AFTER _sass/minimal-light.scss, so equal-specificity
+// rules here win. That matters: the stock theme hardcodes its dark colours
+// inside `@media (prefers-color-scheme: dark)` blocks, and media queries add no
+// specificity — so the rules below can take those colours over and route them
+// through CSS variables instead. That is what makes a manual light/dark toggle
+// possible without rewriting the original stylesheet.
+
+// ---------------------------------------------------------------- palette ---
+
+:root {
+  --ml-bg:            #ffffff;
+  --ml-text:          #333333;
+  --ml-heading:       #043361;
+  --ml-link:          #3399cc;
+  --ml-link-hover:    #006699;
+  --ml-muted:         #595959;
+  --ml-strong:        #222222;
+  --ml-rule:          #e5e5e5;
+
+  --ml-card-bg:       #fbfbfc;
+  --ml-card-border:   #e3e6ea;
+  --ml-card-shadow:   0 1px 2px rgba(16, 24, 40, 0.04);
+
+  --ml-btn-fg:        #333333;
+  --ml-btn-border:    #cfd4dc;
+  --ml-btn-bg:        #ffffff;
+
+  --ml-nav-fg:        #4a4a4a;
+  --ml-nav-hover-bg:  #eef2f7;
+  --ml-nav-active-fg: #043361;
+
+  --ml-accent-warm:   #c2410c;
+}
+
+// System preference supplies dark — unless the visitor explicitly chose light.
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ml-bg:            #20212b;
+    --ml-text:          #dadbdf;
+    --ml-heading:       #3eb7f0;
+    --ml-link:          #3eb7f0;
+    --ml-link-hover:    #7fd0f5;
+    --ml-muted:         #b6b9c4;
+    --ml-strong:        #eeeff0;
+    --ml-rule:          #3a3d4c;
+
+    --ml-card-bg:       #272935;
+    --ml-card-border:   #383b4a;
+    --ml-card-shadow:   none;
+
+    --ml-btn-fg:        #dadbdf;
+    --ml-btn-border:    #4a4e60;
+    --ml-btn-bg:        transparent;
+
+    --ml-nav-fg:        #b9bcc7;
+    --ml-nav-hover-bg:  #2c2f3d;
+    --ml-nav-active-fg: #3eb7f0;
+
+    --ml-accent-warm:   #fb923c;
+  }
+}
+
+// Explicit choice always wins, in both directions.
+:root[data-theme="dark"] {
+  --ml-bg:            #20212b;
+  --ml-text:          #dadbdf;
+  --ml-heading:       #3eb7f0;
+  --ml-link:          #3eb7f0;
+  --ml-link-hover:    #7fd0f5;
+  --ml-muted:         #b6b9c4;
+  --ml-strong:        #eeeff0;
+  --ml-rule:          #3a3d4c;
+
+  --ml-card-bg:       #272935;
+  --ml-card-border:   #383b4a;
+  --ml-card-shadow:   none;
+
+  --ml-btn-fg:        #dadbdf;
+  --ml-btn-border:    #4a4e60;
+  --ml-btn-bg:        transparent;
+
+  --ml-nav-fg:        #b9bcc7;
+  --ml-nav-hover-bg:  #2c2f3d;
+  --ml-nav-active-fg: #3eb7f0;
+
+  --ml-accent-warm:   #fb923c;
+}
+
+// ------------------------------------------- re-route the theme's colours ---
+
+body            { background-color: var(--ml-bg); color: var(--ml-text); }
+h1, h2, h3,
+h4, h5, h6      { color: var(--ml-heading); }
+a               { color: var(--ml-link); }
+a:hover         { color: var(--ml-link-hover); }
+strong          { color: var(--ml-strong); }
+th, dt          { color: var(--ml-heading); }
+hr              { background: var(--ml-rule); }
+autocolor       { color: var(--ml-muted); }
+papertitle      { color: var(--ml-strong); }
+
+.social-icons a       { color: var(--ml-heading) !important; }
+.social-icons a:hover { background-color: var(--ml-nav-hover-bg); color: var(--ml-link) !important; }
+
+// ------------------------------------------------------- sidebar nav menu ---
+
+// The stock theme styles every `header ul` / `header li` as a horizontal
+// pill bar (fixed width, grey background, floated 89px cells). Those selectors
+// outrank a bare `.site-nav`, so each one has to be reset explicitly here.
+header ul.site-nav {
+  margin: 1.6em 0 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  width: auto;
+  height: auto;
+  overflow: visible;
+}
+
+header ul.site-nav li {
+  margin: 0;
+  float: none;
+  width: auto;
+  height: auto;
+  border-right: 0;
+}
+
+// `header ul a` sets display/height/font-size/colour/text-align at a
+// specificity a bare `.site-nav a` cannot beat, so state all of it here.
+header ul.site-nav a {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  height: auto;
+  padding: 0.42em 0.75em;
+  border-radius: 6px;
+  color: var(--ml-nav-fg);
+  font-size: 0.95rem;
+  line-height: 1.35;
+  text-align: left;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+header ul.site-nav a:hover {
+  background-color: var(--ml-nav-hover-bg);
+  color: var(--ml-nav-active-fg);
+}
+
+.site-nav i {
+  width: 1.1em;
+  flex: 0 0 1.1em;
+  text-align: center;
+  font-size: 0.95em;
+  opacity: 0.85;
+}
+
+// ---------------------------------------------------------- theme toggle ---
+
+.theme-toggle {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 100;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid var(--ml-card-border);
+  border-radius: 9px;
+  background-color: var(--ml-card-bg);
+  color: var(--ml-text);
+  font-size: 0.95rem;
+  line-height: 1;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.theme-toggle:hover {
+  background-color: var(--ml-nav-hover-bg);
+  color: var(--ml-nav-active-fg);
+  border-color: var(--ml-nav-active-fg);
+}
+
+// Show the icon for the theme you would switch TO.
+.theme-toggle .icon-to-dark  { display: inline-block; }
+.theme-toggle .icon-to-light { display: none; }
+
+:root[data-theme="dark"] .theme-toggle .icon-to-dark  { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-to-light { display: inline-block; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle .icon-to-dark  { display: none; }
+  :root:not([data-theme="light"]) .theme-toggle .icon-to-light { display: inline-block; }
+}
+
+// -------------------------------------------------------- publication card ---
+
+.pub-note {
+  margin: -0.4em 0 1.2em;
+  color: var(--ml-muted);
+  font-size: 0.88rem;
+}
+
+.publications ol.bibliography li {
+  min-height: 0;
+  margin-bottom: 1rem;
+}
+
+.pub-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1rem;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid var(--ml-card-border);
+  border-radius: 10px;
+  background-color: var(--ml-card-bg);
+  box-shadow: var(--ml-card-shadow);
+  transition: border-color 0.15s ease;
+}
+
+.pub-card:hover { border-color: var(--ml-nav-active-fg); }
+
+.pub-thumb {
+  flex: 0 0 150px;
+  position: relative;
+}
+
+.pub-thumb img {
+  width: 150px;
+  height: 84px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  margin: 0;
+  box-shadow: none;
+}
+
+.pub-thumb .badge {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: var(--ml-heading);
+  font-size: 0.62rem;
+}
+
+.pub-body { flex: 1 1 auto; min-width: 0; }
+
+// Selector is verbose on purpose: publications.css sets
+// `.publications ol.bibliography li .title { font-weight: bolder }`, which
+// outranks a plain `.pub-card .title`.
+.publications ol.bibliography li .pub-card .title {
+  font-weight: 600;
+  font-size: 1.02rem;
+  line-height: 1.35;
+  margin-bottom: 0.35em;
+}
+
+.pub-card .title a { color: var(--ml-strong); }
+.pub-card .title a:hover { color: var(--ml-link); }
+
+.pub-card .author {
+  color: var(--ml-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 0.7em;
+}
+
+.pub-card .author strong { color: var(--ml-strong); }
+
+.pub-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.pub-venue {
+  color: var(--ml-link);
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.pub-venue em { font-style: normal; }
+
+.pub-award {
+  color: var(--ml-accent-warm);
+  font-style: italic;
+  font-weight: 600;
+  margin-left: 0.35em;
+}
+
+.pub-links {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.pub-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  padding: 0.24rem 0.6rem;
+  border: 1px solid var(--ml-btn-border);
+  border-radius: 6px;
+  background-color: var(--ml-btn-bg);
+  color: var(--ml-btn-fg);
+  font-size: 0.78rem;
+  line-height: 1.4;
+  white-space: nowrap;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.pub-links a:hover {
+  color: var(--ml-link);
+  border-color: var(--ml-link);
+}
+
+// ------------------------------------------------------------- responsive ---
+
+@media print, screen and (max-width: 960px) {
+  // The theme absolutely-positions `header ul` on narrow screens and shrinks
+  // `header li` to 33% cells; undo both, then centre the nav under the avatar.
+  header ul.site-nav {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.2rem;
+    width: auto;
+    margin-top: 1.1em;
+  }
+
+  header ul.site-nav li { width: auto; }
+
+  header ul.site-nav a { padding: 0.35em 0.6em; font-size: 0.9rem; }
+
+  .theme-toggle { top: 10px; right: 10px; }
+}
+
+@media print, screen and (max-width: 620px) {
+  .pub-card { flex-direction: column; gap: 0.8rem; }
+  .pub-thumb { flex: 0 0 auto; }
+  .pub-thumb img { width: 100%; height: auto; }
+  .pub-meta { align-items: flex-start; }
+}

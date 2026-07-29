@@ -1,0 +1,7 @@
+---
+---
+
+// Loaded LAST in the layout, after style.css and publications.css.
+// Source order matters here: several rules in _sass/custom.scss deliberately
+// override same-specificity rules from those two stylesheets.
+@import "custom";

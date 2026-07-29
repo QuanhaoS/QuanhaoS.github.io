@@ -21,6 +21,19 @@
     <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin=anonymous>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
+    <!-- Applies the stored theme before first paint, so a visitor who chose a
+         theme never sees the other one flash first. Must stay inline. -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          if (stored === 'dark' || stored === 'light') {
+            document.documentElement.setAttribute('data-theme', stored);
+          }
+        } catch (e) {}
+      })();
+    </script>
+
     {% if site.font == "Sans Serif" %}
     <link rel="stylesheet" href="./assets/css/font_sans_serif.css">
     {% else %}
@@ -34,8 +47,16 @@
     <link rel="stylesheet" href="./assets/css/publications-no-dark-mode.css">
     {% endif %}
 
+    <!-- Must stay last: overrides same-specificity rules from the two above. -->
+    <link rel="stylesheet" href="./assets/css/custom.css">
+
   </head>
   <body>
+    <button class="theme-toggle" type="button" aria-label="Switch to dark mode">
+      <i class="fa-solid fa-moon icon-to-dark" aria-hidden="true"></i>
+      <i class="fa-solid fa-sun icon-to-light" aria-hidden="true"></i>
+    </button>
+
     <div class="wrapper">
       <header>
         
@@ -90,7 +111,23 @@
         </a>
         {% endif %}
         </div>
+
+        {% if site.nav and site.nav.size > 0 %}
+        <nav>
+          <ul class="site-nav">
+            {% for item in site.nav %}
+            <li>
+              <a href="{{ item.url }}">
+                {% if item.icon %}<i class="{{ item.icon }}" aria-hidden="true"></i>{% endif %}
+                <span>{{ item.title }}</span>
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </nav>
+        {% else %}
         <br>
+        {% endif %}
 
       </header>
       <section>
@@ -109,6 +146,7 @@
       </footer>
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+    <script src="{{ "/assets/js/theme-toggle.js" | relative_url }}"></script>
     {% if site.google_analytics %}
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

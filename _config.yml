@@ -27,6 +27,30 @@ avatar: ./assets/img/avatar.png
 favicon: ./assets/img/favicon.png
 favicon_dark: ./assets/img/favicon-dark.png
 
+# Sidebar navigation
+# Each url is an anchor to a heading on the single page. Jekyll derives heading
+# ids by lowercasing and hyphenating, so "## Research Interests" -> #research-interests.
+# Add the Publications and Services entries back once those sections are turned on.
+nav:
+  - title: About
+    icon: fa-solid fa-user
+    url: "#about-me"
+  - title: Research Interests
+    icon: fa-solid fa-lightbulb
+    url: "#research-interests"
+  - title: Education
+    icon: fa-solid fa-graduation-cap
+    url: "#education"
+  # - title: Publications
+  #   icon: fa-solid fa-book-open
+  #   url: "#publications"
+  # - title: Services
+  #   icon: fa-solid fa-hands-helping
+  #   url: "#services"
+
+# Optional line shown under the Publications heading, e.g. for author-order notes.
+# publications_note: "* denotes equal contribution"
+
 # Footnote
 # You may use the option to disable the footnote, "Powered by Jekyll and Minimal Light theme."
 enable_footnote: true
