@@ -31,6 +31,9 @@ synthesis.
 - **Graduate Research Assistant**, Laboratory of NeuroImaging (LONI), University of
   Southern California — Sep 2023 – Present
 - **Teaching Assistant**, University of Southern California — Aug 2023 – Nov 2024
+  - BME 515: Data Analytics in Biomedical Engineering (Spring 2024)
+  - BME 427: Basics of Biomedical Imaging — Non-Ionizing Radiation
+  - MATH 118 (Fall 2023)
 - **Graduate Research Assistant**, [Fan MR Imaging Research Lab](https://sites.usc.edu/fan-mri-lab/),
   University of Southern California — Aug 2022 – Aug 2023. Supervised by
   [Zhaoyang Fan](https://viterbi.usc.edu/directory/faculty/Fan/Zhaoyang).
