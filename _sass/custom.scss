@@ -290,6 +290,10 @@ header ul.site-nav a:hover {
 
 .pub-venue em { font-style: normal; }
 
+// Global `strong` is dark; inside the venue line that reads as a colour change
+// mid-sentence. Keep the bold weight, drop the colour switch.
+.pub-venue strong { color: inherit; }
+
 .pub-award {
   color: var(--ml-accent-warm);
   font-style: italic;
