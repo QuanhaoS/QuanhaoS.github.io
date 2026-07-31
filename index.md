@@ -31,6 +31,9 @@ synthesis.
 - **Graduate Research Assistant**, Laboratory of NeuroImaging (LONI), University of
   Southern California — Sep 2023 – Present
 - **Teaching Assistant**, University of Southern California — Aug 2023 – Nov 2024
+- **Graduate Research Assistant**, [Fan MR Imaging Research Lab](https://sites.usc.edu/fan-mri-lab/),
+  University of Southern California — Aug 2022 – Aug 2023. Supervised by
+  [Zhaoyang Fan](https://viterbi.usc.edu/directory/faculty/Fan/Zhaoyang).
 - **Undergraduate Research Assistant**, Southeast University, Nanjing, China —
   Sep 2018 – Jun 2022. Supervised by Yu Zhang, Yu Sun, and Peng Xie.
 
