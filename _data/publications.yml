@@ -33,8 +33,19 @@ main:
 
 abstracts:
 
+  # The two ASPNR entries keep the abbreviated "Last F" author style exactly as
+  # supplied. Expanding only the names we happen to know would mix two citation
+  # styles inside one list, and guessing the rest would be worse.
+  - title: Association between Perinatal Risk Factors and MRI Injury with Arc Volume in Neonates with Hypoxic Ischemic Encephalopathy
+    authors: Coloma M, Poddar A, <strong>Sun Q</strong>, Xu D, Calabrese E, Glass HC, Wu YW, Kim H, Paredes M, Li Y
+    conference: American Society of Pediatric Neuroradiology <strong>(ASPNR)</strong> Annual Meeting, Tampa, FL, January 2026.
+
+  - title: Using in vivo MR Imaging as a Biomarker for the Expanded Neonatal Subventricular Zone
+    authors: Poddar A, Coloma M, <strong>Sun Q</strong>, Xu D, Calabrese E, Glass HC, Wu YW, Kim H, Paredes M*, Li Y*
+    conference: American Society of Pediatric Neuroradiology <strong>(ASPNR)</strong> Annual Meeting, Tampa, FL, January 2026.
+
   - title: Latent Diffusion Model to Remove Motion Artifacts in Neonatal MRI
-    authors: <strong>Quanhao Sun</strong>, Yaqiong Chai, S. Li, X. Duan, Michael C.K. Khoo, Hosung Kim
+    authors: <strong>Quanhao Sun</strong>, Yaqiong Chai, Steven Li, Xu Duan, Michael C.K. Khoo, Hosung Kim
     conference: Biomedical Engineering Society <strong>(BMES)</strong> Annual Meeting, 2025.
 
   - title: Correction of Motion-Affected MRI Images via Motion-Adaptive Diffusion Model
@@ -43,10 +54,6 @@ abstracts:
     # this venue silently truncates at "Abstract".
     conference: "International Society for Magnetic Resonance in Medicine <strong>(ISMRM)</strong> Annual Meeting, Abstract #3980, 2024."
 
-  # Two further ASPNR 2026 abstracts are pending — Google Scholar renders their
-  # author lists in a mangled order, so they are held back rather than published
-  # with a wrong author sequence:
-  #   - Using in vivo MR Imaging as a Biomarker for the Expanded Neonatal
-  #     Subventricular Zone (ASPNR Annual Meeting, 2026)
-  #   - Association between Perinatal Risk Factors and MRI Injury with Arc Volume
-  #     in Neonates with Hypoxic Ischemic Encephalopathy (ASPNR Annual Meeting, 2026)
+  # TODO: the asterisks on "Paredes M*, Li Y*" in the Subventricular Zone
+  # abstract are carried over verbatim from the source citation. Their meaning
+  # (co-senior? equal contribution?) is unconfirmed, so no legend is shown yet.
