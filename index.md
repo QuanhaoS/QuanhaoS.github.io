@@ -23,10 +23,16 @@ synthesis.
 
 ## Education
 
-<!-- TODO: add the graduation year to the Southeast University line below. -->
+- **Ph.D. in Biomedical Engineering**, University of Southern California, 2022 – 2027 (expected)
+- **B.S. in Biomedical Engineering**, Southeast University, 2018 – 2022
 
-- **Ph.D. in Biomedical Engineering**, University of Southern California, expected 2027
-- **B.S. in Biomedical Engineering**, Southeast University
+## Experience
+
+- **Graduate Research Assistant**, Laboratory of NeuroImaging (LONI), University of
+  Southern California — Sep 2023 – Present
+- **Teaching Assistant**, University of Southern California — Aug 2023 – Nov 2024
+- **Undergraduate Research Assistant**, Southeast University, Nanjing, China —
+  Sep 2018 – Jun 2022. Supervised by Yu Zhang, Yu Sun, and Peng Xie.
 
 
 {% include_relative _includes/publications.md %}

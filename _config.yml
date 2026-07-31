@@ -40,6 +40,9 @@ nav:
   - title: Education
     icon: fa-solid fa-graduation-cap
     url: "#education"
+  - title: Experience
+    icon: fa-solid fa-briefcase
+    url: "#experience"
   - title: Publications
     icon: fa-solid fa-book-open
     url: "#publications"
