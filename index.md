@@ -28,16 +28,13 @@ synthesis.
 - **B.S. in Biomedical Engineering**, Southeast University
 
 
+{% include_relative _includes/publications.md %}
+
 <!--
-Publications and Services are not shown yet — publishing placeholder papers or an
-empty Services list is worse than omitting the section.
-
-To turn Publications on: fill in _data/publications.yml, then add an
-include_relative tag for _includes/publications.md at the bottom of this file.
-Same for Services with _includes/services.md.
-
+Services is still off — an empty Services list is worse than no section. To turn
+it on, fill in _includes/services.md and add an include_relative tag for it here.
 A News section can go above Publications once there are real items to list.
 
-The include tags are described in words rather than written out because Liquid
-tags execute even inside HTML comments.
+Written as prose rather than a commented-out tag because Liquid tags execute
+even inside HTML comments.
 -->

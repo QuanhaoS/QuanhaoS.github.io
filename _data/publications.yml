@@ -1,26 +1,52 @@
-# Each entry below becomes one row in the Publications section.
+# Two lists render as two sections:
+#   main      -> "Publications"          (journal articles and preprints)
+#   abstracts -> "Conference Abstracts"  (meeting abstracts / posters)
 #
-# Field reference (only `title` and `authors` are really required):
-#   title            - paper title. Wrap in "quotes" if it contains a colon.
-#   authors          - full author list. Wrap Quanhao's name in <strong></strong>.
-#   conference_short - short badge shown on the thumbnail, e.g. MICCAI, ISMRM.
-#   conference       - full venue string, shown in italics under the authors.
-#   pdf              - link to the PDF or arXiv page. Also makes the title clickable.
-#   code             - link to the code repository.               (optional)
-#   page             - link to a project page.                    (optional)
-#   bibtex           - link to a .txt file containing the BibTeX. (optional)
-#   image            - teaser thumbnail, ~600px wide.             (optional)
-#   notes            - red highlight text, e.g. "Oral Presentation". (optional)
+# Keeping abstracts separate is the honest convention — an ISMRM or BMES
+# abstract is a real contribution but is not a peer-reviewed paper, and listing
+# them together overstates the record.
+#
+# Field reference (only `title` and `authors` are required):
+#   title            - wrap in "quotes" if it contains a colon
+#   authors          - full list; wrap Quanhao's name in <strong></strong>
+#   conference       - full venue string, italicised under the authors
+#   conference_short - short badge, only shows when `image` is also set
+#   pdf              - DOI/arXiv link; also makes the title clickable
+#   code             - repository link                           (optional)
+#   page             - project page link                         (optional)
+#   bibtex           - link to a .txt file of the BibTeX entry    (optional)
+#   image            - teaser thumbnail, ~600px wide              (optional)
+#   notes            - highlight in orange, e.g. "Oral Presentation"
 
 main:
 
-  # TODO: replace this example with Quanhao's real publications, newest first.
-  # Delete this entry entirely if there is nothing to list yet — an empty
-  # `main:` renders as an empty Publications section, which is fine.
-  - title: "Example Paper Title: Replace Me"
-    authors: First Author, <strong>Quanhao Sun</strong>, Senior Author
-    conference_short: MICCAI
-    conference: International Conference on Medical Image Computing and Computer-Assisted Intervention <strong>(MICCAI)</strong>, 2025.
-    pdf: https://arxiv.org/abs/0000.00000
-    image: ./assets/img/teaser_example.png
-    notes: Early Accept
+  - title: Multimodal Free-Water Imaging Links Cardiometabolic Risk to Periarterial Dysfunction and Amyloid Accumulation in Early Alzheimer's
+    authors: Yaqiong Chai, Hedong Zhang, Andrew S. Kim, <strong>Quanhao Sun</strong>, Shuting Chen, Jongmok Ha, Kyung Wook Kang, Harmony Cen, Jung Won Shin, Gilsoon Park, Jiyeah Choi, Minji Kim, Neda Jahanshad, Paul M. Thompson, Helena C. Chui, Danny J.J. Wang, Diane C. Lim, Eun Yeon Joo, Arthur W. Toga, Hosung Kim
+    conference: <em>Research Square</em>, 2026.
+    pdf: https://doi.org/10.21203/rs.3.rs-9374985/v1
+    notes: Preprint
+
+  - title: Zwitterion-functionalized hollow mesoporous Prussian blue nanoparticles for targeted and synergetic chemo-photothermal treatment of acute myeloid leukemia
+    authors: Huiyuan Bai, <strong>Quanhao Sun</strong>, Fei Kong, Haijiao Dong, Ming Ma, Fangzhou Liu, Chen Wang, Haiyan Xu, Ning Gu, Yu Zhang
+    conference: <em>Journal of Materials Chemistry B</em> <strong>9</strong>(26), 5245–5254, 2021.
+    pdf: https://doi.org/10.1039/d1tb00548k
+
+abstracts:
+
+  - title: Latent Diffusion Model to Remove Motion Artifacts in Neonatal MRI
+    authors: <strong>Quanhao Sun</strong>, Yaqiong Chai, S. Li, X. Duan, Michael C.K. Khoo, Hosung Kim
+    conference: Biomedical Engineering Society <strong>(BMES)</strong> Annual Meeting, 2025.
+
+  - title: Correction of Motion-Affected MRI Images via Motion-Adaptive Diffusion Model
+    authors: <strong>Quanhao Sun</strong>, Yaqiong Chai, Michael C.K. Khoo, Hosung Kim
+    # Quoted because an unquoted " #" starts a YAML comment — without the quotes
+    # this venue silently truncates at "Abstract".
+    conference: "International Society for Magnetic Resonance in Medicine <strong>(ISMRM)</strong> Annual Meeting, Abstract #3980, 2024."
+
+  # Two further ASPNR 2026 abstracts are pending — Google Scholar renders their
+  # author lists in a mangled order, so they are held back rather than published
+  # with a wrong author sequence:
+  #   - Using in vivo MR Imaging as a Biomarker for the Expanded Neonatal
+  #     Subventricular Zone (ASPNR Annual Meeting, 2026)
+  #   - Association between Perinatal Risk Factors and MRI Injury with Arc Volume
+  #     in Neonates with Hypoxic Ischemic Encephalopathy (ASPNR Annual Meeting, 2026)
