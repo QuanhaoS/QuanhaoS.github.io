@@ -28,7 +28,9 @@ favicon_dark: ./assets/img/favicon-dark.png
 # Sidebar navigation
 # Each url is an anchor to a heading on the single page. Jekyll derives heading
 # ids by lowercasing and hyphenating, so "## Research Interests" -> #research-interests.
-# Add the Publications and Services entries back once those sections are turned on.
+# Order must match the section order in index.md. Publications sits high on the
+# page on purpose: it is what most visitors came for, and Education/Experience
+# below it are the kind of thing people scroll past.
 nav:
   - title: About
     icon: fa-solid fa-user
@@ -39,6 +41,12 @@ nav:
   - title: Projects
     icon: fa-solid fa-flask
     url: "#projects"
+  - title: Publications
+    icon: fa-solid fa-book-open
+    url: "#publications"
+  - title: Conference Abstracts
+    icon: fa-solid fa-file-lines
+    url: "#conference-abstracts"
   - title: Education
     icon: fa-solid fa-graduation-cap
     url: "#education"
@@ -48,12 +56,6 @@ nav:
   - title: Awards
     icon: fa-solid fa-award
     url: "#awards"
-  - title: Publications
-    icon: fa-solid fa-book-open
-    url: "#publications"
-  - title: Conference Abstracts
-    icon: fa-solid fa-file-lines
-    url: "#conference-abstracts"
   # - title: Services
   #   icon: fa-solid fa-hands-helping
   #   url: "#services"

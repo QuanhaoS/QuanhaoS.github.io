@@ -54,6 +54,8 @@ detail.
   CXCR4-antagonist-functionalized nanoparticles for targeted chemo-photothermal
   treatment.
 
+{% include_relative _includes/publications.md %}
+
 ## Education
 
 - **Ph.D. in Biomedical Engineering**, University of Southern California, 2022 – 2027 (expected)
@@ -78,9 +80,6 @@ detail.
 - Meritorious Winner, Mathematical Contest in Modeling (MCM), 2021
 - First Prize, Contemporary Undergraduate Mathematical Contest in Modeling (CUMCM), 2020
 - Third Prize, National Biomedical Engineering Innovation Design Competition, 2020
-
-
-{% include_relative _includes/publications.md %}
 
 <!--
 Services is still off — an empty Services list is worse than no section. To turn
