@@ -11,15 +11,48 @@ of the [NeuroImaging with Deep Learning Lab (NIDLL)](https://sites.google.com/us
 part of the [Laboratory of NeuroImaging (LONI)](https://loni.usc.edu/) at the USC Mark and Mary
 Stevens Neuroimaging and Informatics Institute.
 
-My research focuses on generative AI for brain MRI — in particular, generative and
-diffusion-based models for image reconstruction, motion correction, and cross-modality
-synthesis.
+My research is on generative AI for learning meaningful medical imaging representations
+under limited ground truth — in particular, generative and diffusion-based models for
+image reconstruction, motion correction, and cross-modality synthesis in brain MRI.
 
 ## Research Interests
 
 - **Medical Image Reconstruction:** accelerated MRI reconstruction, diffusion-based priors
 - **Motion Correction:** retrospective and prospective correction for brain MRI
 - **Cross-Modality Synthesis:** translation between MRI contrasts and modalities
+
+## Projects
+
+Selected from the [CV](assets/files/Quanhao-Sun-CV.pdf), which carries the full
+technical detail for each.
+
+- **Generative Synthesis of Black-Blood MRI from T2-FLAIR** — Contrast-free
+  quantification of the parasagittal dural space, via a two-stage 3D VQGAN with a
+  modality-conditional MaskGIT decoder.
+- **Motion-Adaptive Diffusion Model (MADM)** — 3D MRI motion correction in a VQGAN
+  latent space, using an age-conditioned, attention-enhanced U-Net denoiser;
+  validated on adult and neonatal cohorts.
+- **Arc Segmentation for Infant Brain Development** — Clinician-in-the-loop 3D
+  nnU-Net pipeline for a developmental biomarker in fetal and infant T2 MRI.
+- **Regional Brain Age Prediction with Graph Convolutional Networks** —
+  Laplacian-depth white-matter surface reconstruction feeding a GCN over cortical
+  and depth-stratified white-matter features.
+- **Accelerated MRI Reconstruction from Undersampled K-space** — Cascaded
+  multi-scale wavelet network with iterative refinement, benchmarked against
+  variational networks and compressed sensing.
+- **Multi-modal Physiological Signal Analysis Software** — Desktop and CLI tool for
+  EDF recordings with filtering, CWT/STFT visualization, and batch export.
+- **Brain Tumor Segmentation from Multi-Contrast MRI** — FuseNet across T1, T2, DWI
+  and FLAIR, with a step identifying the major contributing modalities.
+- **Neural Functional Connectivity Brain Atlas** — Cortex–thalamus connectivity
+  atlas with 3D visualization and hierarchical clustering of brain regions.
+- **Thyroid Nodule Segmentation in Ultrasound** — Dual-pathway high-resolution
+  encoder–decoder with a convolutional block attention module.
+- **Vaa3D Neuron Image Enhancement Plugins** — Plugins for gigabyte-scale neuron
+  visualization and VR-assisted observation.
+- **Mesoporous Prussian Blue Nanoparticles for AML** — Zwitterion- and
+  CXCR4-antagonist-functionalized nanoparticles for targeted chemo-photothermal
+  treatment.
 
 ## Education
 

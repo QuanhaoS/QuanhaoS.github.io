@@ -36,6 +36,9 @@ nav:
   - title: Research Interests
     icon: fa-solid fa-lightbulb
     url: "#research-interests"
+  - title: Projects
+    icon: fa-solid fa-flask
+    url: "#projects"
   - title: Education
     icon: fa-solid fa-graduation-cap
     url: "#education"
