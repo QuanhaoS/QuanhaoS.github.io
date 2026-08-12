@@ -23,8 +23,8 @@ image reconstruction, motion correction, and cross-modality synthesis in brain M
 
 ## Projects
 
-Selected from the [CV](assets/files/Quanhao-Sun-CV.pdf), which carries the full
-technical detail for each.
+One line each; the [CV](assets/files/Quanhao-Sun-CV.pdf) carries the full technical
+detail.
 
 - **Generative Synthesis of Black-Blood MRI from T2-FLAIR** — Contrast-free
   quantification of the parasagittal dural space, via a two-stage 3D VQGAN with a
