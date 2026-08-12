@@ -45,8 +45,12 @@ abstracts:
     conference: American Society of Pediatric Neuroradiology <strong>(ASPNR)</strong> Annual Meeting, Tampa, FL, January 2026.
 
   - title: Latent Diffusion Model to Remove Motion Artifacts in Neonatal MRI
-    authors: <strong>Quanhao Sun</strong>, Yaqiong Chai, Steven Li, Xu Duan, Michael C.K. Khoo, Hosung Kim
+    authors: <strong>Quanhao Sun</strong>, Yaqiong Chai, Steven Li, Duan Xu, Michael C.K. Khoo, Hosung Kim
     conference: Biomedical Engineering Society <strong>(BMES)</strong> Annual Meeting, 2025.
+    # Text-only abstract regenerated from the submission record. The original
+    # submission preview is NOT published — it carries dates of birth, gender,
+    # ethnicity and per-author membership data.
+    pdf: /assets/files/bmes2025-abstract.pdf
 
   - title: Correction of Motion-Affected MRI Images via Motion-Adaptive Diffusion Model
     authors: <strong>Quanhao Sun</strong>, Yaqiong Chai, Michael C.K. Khoo, Hosung Kim

@@ -1,0 +1,126 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 2 /Kids [3 0 R 4 0 R] >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 7 0 R /F2 8 0 R /F3 9 0 R >> >> /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 7 0 R /F2 8 0 R /F3 9 0 R >> >> /Contents 6 0 R >>
+endobj
+5 0 obj
+<< /Length 4710 >>
+stream
+BT /F2 15 Tf 72 701.0 Td (Latent Diffusion Model to Remove Motion Artifacts in Neonatal MRI) Tj ET
+BT /F1 10.5 Tf 72 676.8 Td (Quanhao Sun, Yaqiong Chai, Steven Li, Duan Xu, Michael Khoo, Hosung Kim) Tj ET
+BT /F1 9 Tf 72 660.7 Td (University of Southern California, Los Angeles, CA; University of California San Francisco, San Francisco, CA) Tj ET
+BT /F3 9.5 Tf 72 642.0 Td (Biomedical Engineering Society \(BMES\) Annual Meeting, 2025. Track: Biomedical Imaging and Instrumentation - Deep) Tj ET
+BT /F3 9.5 Tf 72 628.2 Td (Learning and Artificial Intelligence in Biomedical Imaging and Instrumentation.) Tj ET
+0.72 w 0.72 0.72 0.72 RG 72 620.2 m 540 620.2 l S
+BT /F2 11 Tf 72 590.2 Td (Introduction) Tj ET
+BT /F1 10.5 Tf 72 572.0 Td (Neonatal brain MRI is a critical imaging method for assessing early brain development and) Tj ET
+BT /F1 10.5 Tf 72 556.8 Td (neurodevelopmental abnormalities and guiding clinical interventions. However, acquiring high-quality images) Tj ET
+BT /F1 10.5 Tf 72 541.5 Td (in neonates is challenging because infants cannot remain still during image acquisition, and sedation is often) Tj ET
+BT /F1 10.5 Tf 72 526.3 Td (not feasible. Their scans are thus frequently affected by motion artifacts. Neurodevelopmental features such as) Tj ET
+BT /F1 10.5 Tf 72 511.1 Td (growing brains, incomplete cortical folding, ongoing myelination, and indistinct gray/white matter boundaries) Tj ET
+BT /F1 10.5 Tf 72 495.9 Td (make the appearance of neonatal brains different from adult brains. Motion artifacts can easily obscure these) Tj ET
+BT /F1 10.5 Tf 72 480.6 Td (important features and significantly impact downstream analyses.) Tj ET
+BT /F1 10.5 Tf 72 458.4 Td (Conventional motion correction approaches, including k-space interpolation, rigid-body registration, and) Tj ET
+BT /F1 10.5 Tf 72 443.2 Td (convolutional neural network \(CNN\)-based post-processing, often perform poorly on neonatal data. Most) Tj ET
+BT /F1 10.5 Tf 72 428.0 Td (approaches utilize simulated motions that are often too simplified or rely on paired data where) Tj ET
+BT /F1 10.5 Tf 72 412.7 Td (motion-corrupted and clean images are available, which are difficult to obtain in pediatric imaging. These) Tj ET
+BT /F1 10.5 Tf 72 397.5 Td (methods often lack robust modelling of various patterns of motion common in neonates.) Tj ET
+BT /F1 10.5 Tf 72 375.3 Td (Recently, generative diffusion models have emerged as a powerful alternative. They offer a probabilistic) Tj ET
+BT /F1 10.5 Tf 72 360.1 Td (framework capable of learning data-driven priors and reconstructing clean images from noisy observations. In) Tj ET
+BT /F1 10.5 Tf 72 344.8 Td (this study, we extend our previously developed Motion Adaptive Diffusion Model \(MADM\) to neonatal brain) Tj ET
+BT /F1 10.5 Tf 72 329.6 Td (MRI. Trained on high-quality, artifact-free infant images, MADM learns the structural patterns of neonatal) Tj ET
+BT /F1 10.5 Tf 72 314.4 Td (anatomy and predicts clean images from motion-corrupted images without needing paired supervision. In this) Tj ET
+BT /F1 10.5 Tf 72 299.2 Td (study, we apply MADM to a very challenging task of head-motion correction on neonatal brain MRI and) Tj ET
+BT /F1 10.5 Tf 72 283.9 Td (compare its performance with a CNN approach.) Tj ET
+BT /F2 11 Tf 72 255.0 Td (Materials and Methods) Tj ET
+BT /F1 10.5 Tf 72 236.8 Td (This study utilized a neonatal brain MRI dataset comprising 325 T1-weighted scans from 198 subjects, with) Tj ET
+BT /F1 10.5 Tf 72 221.5 Td (gestational age at birth ranging from 26.7 to 44.3 weeks. All scans were acquired at UCSF Benioff Children's) Tj ET
+BT /F1 10.5 Tf 72 206.3 Td (Hospital, San Francisco. Each scan was visually assessed for motion artifacts; 196 scans were labeled as clean) Tj ET
+BT /F1 10.5 Tf 72 191.1 Td (and 128 as motion corrupted. Clean scans were used for model training, and motion-corrupted scans served as) Tj ET
+BT /F1 10.5 Tf 72 175.9 Td (the testing set.) Tj ET
+BT /F1 10.5 Tf 72 153.6 Td (All images underwent intensity normalization to standardize voxel-wise signal distributions. The model) Tj ET
+BT /F1 10.5 Tf 72 138.4 Td (operated on full 3D volumes rather than 2D slices to better capture spatially coherent motion patterns) Tj ET
+BT /F1 10.5 Tf 72 123.2 Td (distributed across slices in neonatal anatomy.) Tj ET
+BT /F1 10.5 Tf 72 101.0 Td (We adopted the MADM, a latent generative framework previously validated in adult MRI motion correction.) Tj ET
+BT /F1 10.5 Tf 72 85.7 Td (The architecture includes a Vector Quantized Generative Adversarial Network \(VQGAN\) for encoding and) Tj ET
+BT /F1 10.5 Tf 72 70.5 Td (decoding, and a 3D latent diffusion model with an attention-enhanced U-Net for denoising. During training,) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Length 4501 >>
+stream
+BT /F1 10.5 Tf 72 704.8 Td (Gaussian noise was progressively added to the latent representations of clean images in the forward process.) Tj ET
+BT /F1 10.5 Tf 72 689.5 Td (The reverse process removed noise conditioned on anatomical priors, reconstructing artifact-free images.) Tj ET
+BT /F1 10.5 Tf 72 667.3 Td (To evaluate the model's performance in the absence of ground truth \(i.e., paired images with/without motion\),) Tj ET
+BT /F1 10.5 Tf 72 652.1 Td (we used NIQE \(naturalness image quality evaluator\) to assess perceptual quality and PSNR \(peak) Tj ET
+BT /F1 10.5 Tf 72 636.9 Td (signal-to-noise ratio\) between input and output volumes to quantify denoising performance. All metrics were) Tj ET
+BT /F1 10.5 Tf 72 621.6 Td (computed in 3D to capture whole-brain image quality. We compared the evaluation metrics between MADM) Tj ET
+BT /F1 10.5 Tf 72 606.4 Td (and a previously developed CNN model.) Tj ET
+BT /F2 11 Tf 72 577.5 Td (Results, Conclusions, and Discussions) Tj ET
+BT /F1 10.5 Tf 72 559.2 Td (Our model demonstrated consistent improvements in image quality across two evaluation metrics. Compared) Tj ET
+BT /F1 10.5 Tf 72 544.0 Td (to the original motion-corrupted inputs, the corrected images exhibited lower NIQE scores \(reduced from) Tj ET
+BT /F1 10.5 Tf 72 528.8 Td (6.097 to 4.831 by 1.266 on average\), indicating improved perceptual quality. PSNR increased by 2.806 dB,) Tj ET
+BT /F1 10.5 Tf 72 513.6 Td (reflecting the model's ability to restore image intensity structure relative to the noisy input. These) Tj ET
+BT /F1 10.5 Tf 72 498.3 Td (improvements were observed consistently across a range of motion severity and gestational age. We further) Tj ET
+BT /F1 10.5 Tf 72 483.1 Td (compared our MADM with a baseline 3D convolutional neural network trained with simulated) Tj ET
+BT /F1 10.5 Tf 72 467.9 Td (motion-corrupted images as input, corresponding images as ground truth. MADM consistently outperformed) Tj ET
+BT /F1 10.5 Tf 72 452.7 Td (the CNN across all metrics. Specifically, MADM achieved lower NIQE \(4.831 vs. 5.263\) and higher PSNR) Tj ET
+BT /F1 10.5 Tf 72 437.4 Td (\(26.934 vs. 25.725 dB\). Qualitatively, CNNs were less successful in recovering anatomical details in their) Tj ET
+BT /F1 10.5 Tf 72 422.2 Td (output images and left residual artifacts in regions affected by severe motion. In contrast, MADM preserved) Tj ET
+BT /F1 10.5 Tf 72 407.0 Td (finer details and sharper anatomical boundaries, particularly in key neurodevelopmental features such as the) Tj ET
+BT /F1 10.5 Tf 72 391.8 Td (cortical plate, subplate, and early sulcal structures. These enhancements were visually evident in both mild and) Tj ET
+BT /F1 10.5 Tf 72 376.5 Td (moderate motion cases, supporting the model's robustness to varying artifact severity.) Tj ET
+BT /F1 10.5 Tf 72 354.3 Td (The results demonstrate the capacity of our latent diffusion-based framework to perform effective motion) Tj ET
+BT /F1 10.5 Tf 72 339.1 Td (artifact correction in neonatal brain MRI, even without access to paired clean references. By operating in a) Tj ET
+BT /F1 10.5 Tf 72 323.9 Td (learned latent space conditioned on anatomical priors, the model preserves fine structural details while) Tj ET
+BT /F1 10.5 Tf 72 308.6 Td (suppressing motion-induced degradation. The use of full 3D volumes further enables spatially coherent) Tj ET
+BT /F1 10.5 Tf 72 293.4 Td (restoration, where motion artifacts often span multiple slices.) Tj ET
+BT /F1 10.5 Tf 72 271.2 Td (Clinically, this approach has the potential to avoid repetition of scans, improve diagnostic confidence, and) Tj ET
+BT /F1 10.5 Tf 72 256.0 Td (enable more reliable downstream analysis to assess early brain development. Future work will focus on) Tj ET
+BT /F1 10.5 Tf 72 240.7 Td (expanding the training dataset to include more varied motion patterns, incorporating simulated motion into the) Tj ET
+BT /F1 10.5 Tf 72 225.5 Td (forward process, and evaluating model performance in the segmentation of neuroanatomy and the prediction of) Tj ET
+BT /F1 10.5 Tf 72 210.3 Td (clinical outcomes. Overall, our findings support the use of diffusion-based generative models as a practical and) Tj ET
+BT /F1 10.5 Tf 72 195.1 Td (robust solution to head-motion correction on neonatal brain MRI.) Tj ET
+0.72 w 0.72 0.72 0.72 RG 72 182.1 m 540 182.1 l S
+BT /F3 9.5 Tf 72 160.3 Td (Acknowledgements. This study was supported by a USC Generative AI grant and a USC BME Mann Pilot grant) Tj ET
+BT /F3 9.5 Tf 72 146.5 Td (\(PR0002274\).) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Roman /Encoding /WinAnsiEncoding >>
+endobj
+8 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Bold /Encoding /WinAnsiEncoding >>
+endobj
+9 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Italic /Encoding /WinAnsiEncoding >>
+endobj
+10 0 obj
+<< /Title (Latent Diffusion Model to Remove Motion Artifacts in Neonatal MRI) /Producer (manual) >>
+endobj
+xref
+0 11
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000267 00000 n 
+0000000413 00000 n 
+0000005175 00000 n 
+0000009728 00000 n 
+0000009827 00000 n 
+0000009925 00000 n 
+0000010025 00000 n 
+trailer
+<< /Size 11 /Root 1 0 R /Info 10 0 R >>
+startxref
+10141
+%%EOF
