@@ -80,6 +80,8 @@ detail.
 - Meritorious Winner, Mathematical Contest in Modeling (MCM), 2021
 - First Prize, Contemporary Undergraduate Mathematical Contest in Modeling (CUMCM), 2020
 - Third Prize, National Biomedical Engineering Innovation Design Competition, 2020
+- Individual Gold Medal and Team Gold Medal, World Mathematics Team Championship
+  (Junior Group), 2012
 
 <!--
 Services is still off — an empty Services list is worse than no section. To turn
