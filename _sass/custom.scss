@@ -159,6 +159,15 @@ header ul.site-nav a:hover {
   opacity: 0.85;
 }
 
+// ----------------------------------------------------------------- avatar ---
+
+// A photo with dark edges sits on a dark page in dark mode with nothing to
+// separate the two, so the circle reads as floating. A faint ring fixes it
+// without looking like a deliberate border.
+.image.avatar img {
+  box-shadow: 0 0 0 1px var(--ml-card-border);
+}
+
 // ---------------------------------------------------------- theme toggle ---
 
 .theme-toggle {
