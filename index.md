@@ -24,7 +24,7 @@ synthesis.
 ## Education
 
 - **Ph.D. in Biomedical Engineering**, University of Southern California, 2022 – 2027 (expected)
-- **B.S. in Biomedical Engineering**, Southeast University, 2018 – 2022
+- **B.E. in Biomedical Engineering**, Southeast University, 2018 – 2022
 
 ## Experience
 
@@ -38,7 +38,13 @@ synthesis.
   University of Southern California — Aug 2022 – Aug 2023. Supervised by
   [Zhaoyang Fan](https://viterbi.usc.edu/directory/faculty/Fan/Zhaoyang).
 - **Undergraduate Research Assistant**, Southeast University, Nanjing, China —
-  Sep 2018 – Jun 2022. Supervised by Yu Zhang, Yu Sun, and Peng Xie.
+  Sep 2018 – Jun 2022. Supervised by Peng Xie, Yu Sun, Zongcai Ruan, and Yu Zhang.
+
+## Awards
+
+- Meritorious Winner, Mathematical Contest in Modeling (MCM), 2021
+- First Prize, Contemporary Undergraduate Mathematical Contest in Modeling (CUMCM), 2020
+- Third Prize, National Biomedical Engineering Innovation Design Competition, 2020
 
 
 {% include_relative _includes/publications.md %}

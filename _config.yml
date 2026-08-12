@@ -13,9 +13,9 @@ canonical: https://quanhaos.github.io/
 # Links
 # If you don't need one of them, you may delete the corresponding line.
 google_scholar: https://scholar.google.com/citations?user=uPvOPNEAAAAJ&hl=en
-# TODO: drop the real CV PDF into assets/files/ and uncomment. Left out for now
-# so the site doesn't link the theme author's placeholder CV as Quanhao's.
-# cv_link: assets/files/curriculum_vitae.pdf
+# Deliberately a stable filename, not the dated one (CV_2026_08.pdf): the public
+# URL should survive future CV updates. Overwrite this file in place to refresh.
+cv_link: assets/files/Quanhao-Sun-CV.pdf
 github_link: https://github.com/QuanhaoS
 linkedin: https://www.linkedin.com/in/quanhao-sun/
 
@@ -42,6 +42,9 @@ nav:
   - title: Experience
     icon: fa-solid fa-briefcase
     url: "#experience"
+  - title: Awards
+    icon: fa-solid fa-award
+    url: "#awards"
   - title: Publications
     icon: fa-solid fa-book-open
     url: "#publications"
