@@ -41,7 +41,7 @@ abstracts:
     conference: American Society of Pediatric Neuroradiology <strong>(ASPNR)</strong> Annual Meeting, Tampa, FL, January 2026.
 
   - title: Using in vivo MR Imaging as a Biomarker for the Expanded Neonatal Subventricular Zone
-    authors: Poddar A, Coloma M, <strong>Sun Q</strong>, Xu D, Calabrese E, Glass HC, Wu YW, Kim H, Paredes M*, Li Y*
+    authors: Poddar A, Coloma M, <strong>Sun Q</strong>, Xu D, Calabrese E, Glass HC, Wu YW, Kim H, Paredes M, Li Y
     conference: American Society of Pediatric Neuroradiology <strong>(ASPNR)</strong> Annual Meeting, Tampa, FL, January 2026.
 
   - title: Latent Diffusion Model to Remove Motion Artifacts in Neonatal MRI
@@ -58,6 +58,7 @@ abstracts:
     # this venue silently truncates at "Abstract".
     conference: "International Society for Magnetic Resonance in Medicine <strong>(ISMRM)</strong> Annual Meeting, Abstract #3980, 2024."
 
-  # TODO: the asterisks on "Paredes M*, Li Y*" in the Subventricular Zone
-  # abstract are carried over verbatim from the source citation. Their meaning
-  # (co-senior? equal contribution?) is unconfirmed, so no legend is shown yet.
+  # Author asterisks are intentionally not used anywhere in this file. An
+  # unexplained marker raises a question the page does not answer; if a
+  # convention is ever needed, add the markers back together with a legend via
+  # `publications_note` in _config.yml.
